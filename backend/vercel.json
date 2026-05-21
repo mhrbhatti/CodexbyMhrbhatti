@@ -1,19 +1,14 @@
 {
-  "version": 2,
-  "installCommand": "npm install",
   "builds": [
     {
-      "src": "package.json",
+      "src": "./server.js",
       "use": "@vercel/node",
-      "config": {
-        "buildCommand": "npm run vercel-build"
-      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/server.js"
+      "dest": "/server.js"
     }
   ]
 }
